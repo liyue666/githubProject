@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" src="js/jquery-1.7.2.min.js"></script>
+<script language="javascript" src="http://www.imooc.com/data/jquery.validate.js"></script>
+<script type="text/javascript" src="http://www.imooc.com/data/jquery.validate.messages_cn.js"></script>
+<style>
+
+
+</style>
+
+</head>
+
+<body>
+<form id="demovalidate">
+ <fieldset>
+  <legend>用户登录</legend>
+   <p>
+    <label for="username">用户名</label>
+    <input type="text" name="username"></input>
+   </p>
+   <p> 
+    <label for="password">密码</label>
+    <input type="text" name="password"></input>
+   </p> 
+    <button>提交</button>
+   </fieldset> 
+</form>
+<script>
+  $(function(){
+    $('#demovalidate').validate({
+		rules:{
+			username:{
+			required:ture,		
+			maxlength:10,
+			minlength:2,//竟然是逗号
+					},
+			password:{
+			required:ture,		
+			maxlength:10,
+			minlength:2,//竟然是逗号
+			errorP:lacement,
+					},
+			messages:{
+				username:{
+				required:必填项目,
+				maxlength:最大10位,
+				minlength:最小2位,
+				}
+				}				
+	}
+})
+})
+</script>
+</body>
+</html>
